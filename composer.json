@@ -1,0 +1,17 @@
+{
+    "name": "hp/php",
+    "autoload": {
+        "psr-4": {
+            "Hp\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sammy-258",
+            "email": "ogunnaikesammy258@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.0"
+    }
+}

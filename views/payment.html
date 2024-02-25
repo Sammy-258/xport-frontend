@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eport | Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+         .content{
+            background-image: linear-gradient(to right, rgba(62, 153, 193, 0.8) 50%, rgba(62, 153, 193, 0.8) 50%), url('./img/bg/regbg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        .logo img{
+            width: 80px;
+        }
+        .main{
+            width: 800px;
+        }
+        .personal input{
+            height: 40px;
+            cursor: text;
+            border: 3px solid #f4f7f9;
+            color: #959899;
+            outline: none;
+            background-color: #fff;
+            padding-left: 10px;
+        }
+        label{
+            font-size: 12px;
+        }
+        ::placeholder{
+            font-size: 12px;
+        }
+        .fs-7{
+            font-size: 13px;
+        }
+        .btn-yellow{
+            background-color: #eeba00;
+        }
+        .btn-yellow:hover{
+            background-color: #eeba00;
+        }
+        @media(max-width: 767px){
+            .content{
+                height: 100%;
+                padding: 58% 0;
+            }
+            .main{
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content overflow-x-hidden">
+        <div class="container">
+            <div class="main bg-white p-4 shadow">
+                <div class="logo">
+                    <img src="./img/icon/xportlogo.jpg" alt="">
+                </div>
+                <h3 class="text-uppercase text-secondary py-2 fw-bold fs-7 mb-0">Checkout</h3>
+                <div class="row align-items-start">
+                    <div class="col-lg-6 gy-3 gy-lg-0">
+                        <h5 class="text-uppercase text-secondary fs-7">Personal Details</h5>
+                        <hr class="m-0">
+                        <form action="" class="personal">
+                            <div class="row">
+                                <div class="col-lg-6 gy-1">
+                                    <label for="fname" class="fw-bold text-secondary">First Name</label>
+                                    <input type="text" name="fname" placeholder="John" class="w-100">
+                                </div>
+                                <div class="col-lg-6 gy-1">
+                                    <label for="lname" class="fw-bold text-secondary">Last Name</label>
+                                    <input type="text" name="lname" placeholder="Doe" class="w-100">
+                                </div>
+                                <div class="col-lg-12 gy-1">
+                                    <label for="email" class="fw-bold text-secondary">Email Address</label>
+                                    <input type="email" name="email" class="w-100" placeholder="johndoe@gmail.com">
+                                </div>
+                                <div class="col-lg-12 gy-1">
+                                    <label for="pward" class="fw-bold text-secondary">Password</label>
+                                    <input type="password" name="pward" class="w-100" placeholder="***********">
+                                </div>
+                            </div>
+                        </form>
+                        <h5 class="text-uppercase text-secondary mt-1 fs-6">Payment Method</h5>
+                        <hr class="my-2">
+                        <form action="">
+                            <p class="text-uppercase text-secondary m-0 fs-7 fw-medium">Wallet Payment</p>
+                            <div class="d-flex gap-3 mt-1 mb-2">
+                                <div>
+                                    <input type="radio" name="payment" value="Phone Pe">
+                                    <label for="payment" class="text-secondary fw-bold">Phone Pe</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="payment" value="Google Pay">
+                                    <label for="payment" class="text-secondary fw-bold">Goggle Pay</label>
+                                </div>              
+                                <div>
+                                    <input type="radio" name="payment" value="BHIM">
+                                    <label for="payment" class="text-secondary fw-bold">BHIM</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="payment" value="PayPal">
+                                    <label for="payment" class="text-secondary fw-bold">PayPal</label>
+                                </div>
+                            </div>
+
+                        </form>
+                        <h5 class="fw-bold text-secondary">Payment with cards</h5>
+                        <form action="">
+                            <div class="px-3 py-1 bg-primary-subtle">
+                                <input type="radio" checked>
+                                <label for="" class="fw-bold text-secondary">Debit / Credit Card</label>
+                                <p class="text-primary fw-bold fs-7">If you are choosing card payment option. Please fill the details of your card</p>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-lg-6 gy-3 gy-lg-0">
+                        <h5 class="text-uppercase text-secondary fs-7">Card Details</h5>
+                        <hr class="m-0">
+                        <form action="" class="personal">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label for="cname" class="fw-bold text-secondary">Name on card</label>
+                                    <input type="text" name="cname" class="w-100" placeholder="John Doe">
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cnumber" class="fw-bold text-secondary">Card Number</label>
+                                    <input type="text" name="cnumber" class="w-100" placeholder="**** **** ****">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="cnumber" class="fw-bold text-secondary">Valid Through(MM/YY)</label>
+                                    <input type="number" name="cnumber" class="w-100" placeholder="MM/YY">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="cnumber" class="fw-bold text-secondary">CCV(3 digits)</label>
+                                    <input type="number" name="cnumber" class="w-100" placeholder="***">
+                                </div>
+                                <div class="col-lg-12 gy-3">
+                                    <button class="btn btn-yellow rounded-0 w-100 text-white fw-bold">Checkout</button>
+                                </div>
+                            </div>
+
+                        </form>
+                       
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
